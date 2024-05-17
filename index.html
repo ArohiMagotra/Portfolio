@@ -15,14 +15,14 @@
     }
 
     header {
-      background-color: #333;
+      background-color: #1E5162;
       color: #fff;
       padding: 20px;
       text-align: center;
     }
 
     nav {
-      background-color: #444;
+      background-color: #296E85;
       color: #fff;
       padding: 10px 0;
       text-align: center;
@@ -38,65 +38,72 @@
       padding: 20px;
     }
 
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust the minimum width as needed */
+        gap: 20px;
+      }
 
-    .project img {
-      max-width: 100%;
-      cursor: pointer;
-      /* Add cursor pointer to indicate clickable */
-      transition: transform 0.3s ease;
-      /* Add transition for smooth animation */
-    }
+      .project {
+        border: 1px solid #ccc;
+        overflow: hidden;
+      }
 
-    .project {
-      border: 1px solid #ccc;
-      overflow: hidden;
-      /* Hide overflow for smoother animation */
-    }
+      .project img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
 
-    .project:hover img {
-      transform: scale(1.1);
-      /* Scale up image on hover */
-    }
+      .project:hover img {
+        transform: scale(1.1); /* Scale up image on hover */
+      }
+
   </style>
 </head>
 
 <body>
   <header>
     <h1>Arohi Magotra</h1>
-    <img src="your_picture.jpg" alt="Profile Picture" style="max-width: 150px; border-radius: 50%;">
+    <img src="Static/Images/profilepicture.png" alt="Profile Picture" style="max-width: 150px; border-radius: 50%;">
     <h3> Senior iOS Developer </h3>
   </header>
   <nav>
     <a href="#about">About Me</a>
     <a href="#projects">My Work</a>
-    <a href="mailto:your.email@example.com">Contact</a> <!-- Added mailto: link -->
+    <a href="#contact">Contact</a> <!-- Added mailto: link -->
   </nav>
   <section id="about">
     <h2>About Me</h2>
-    <p>With years of experience in iOS development, I specialize in crafting sleek and user-friendly apps for the Apple
+    <p>With six years of experience in iOS development, I specialize in crafting sleek and user-friendly apps for the Apple
     ecosystem. From elegant UI designs to seamless functionalities, I bring your app ideas to life with precision and
     expertise. Let's build something amazing together for the App Store!</p>
   </section>
   <section id="projects">
-    <h2>My Work</h2>
+    <h2>Glimse of My Work</h2>
     <div class="projects-grid">
       <div class="project" onclick="animateProject(this)">
-        <a href="project1.html"><img src="project1.jpg" alt="Project 1"></a>
+        <a href="https://apps.apple.com/za/app/absa-banking/id1085620596"><img src="Static/Images/Absa-Logo.jpg" alt="ABSA Bank"></a>
       </div>
       <div class="project" onclick="animateProject(this)">
-        <a href="project2.html"><img src="project2.jpg" alt="Project 2"></a>
+        <a href="https://apps.apple.com/in/app/planetcart/id1614841035"><img src="Static/Images/PlanetCart.jpg" alt="Planet Cart"></a>
+      </div>
+      <div class="project" onclick="animateProject(this)">
+        <a href="https://apps.apple.com/us/app/fly-delta/id388491656"><img src="Static/Images/Delta.png" alt="Delta Airlines"></a>
+      </div>
+      <div class="project" onclick="animateProject(this)">
+        <a href="https://apps.apple.com/us/app/tookan-agent/id997255391"><img src="Static/Images/TookanAgent.png" alt="Tookan Agent"></a>
+      </div>
+      <div class="project" onclick="animateProject(this)">
+        <a href="https://apps.apple.com/in/app/hippo-chat-support/id1250463828"><img src="Static/Images/Hippo.png" alt="Hippo Chat"></a>
       </div>
       <!-- Add more projects as needed -->
     </div>
   </section>
   <section id="contact">
     <h2>Contact</h2>
-    <p>You can contact me at: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    <p>You can contact me at: <a href="mailto:arohimagotra@gmail.com">arohimagotra@gmail.com</a></p>
+    <p>Or give me a call at: <a href="tel:+91 7006024854">+91 7006024854</a></p>
     <!-- Added mailto: link -->
   </section>
 
