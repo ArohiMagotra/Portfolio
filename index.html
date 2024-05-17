@@ -1,76 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senior iOS Developer</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        section {
-            padding: 20px;
-        }
-        h2 {
-            color: #333;
-        }
-        .project {
-            margin-bottom: 30px;
-        }
-        .project img {
-            max-width: 100%;
-            height: auto;
-        }
-        .project-description {
-            margin-top: 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Senior iOS Developer</title>
+  <style>
+    /* Add your CSS styles here */
+    /* Example styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #444;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      margin: 0 20px;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .project img {
+      max-width: 100%;
+      cursor: pointer;
+      /* Add cursor pointer to indicate clickable */
+      transition: transform 0.3s ease;
+      /* Add transition for smooth animation */
+    }
+
+    .project {
+      border: 1px solid #ccc;
+      overflow: hidden;
+      /* Hide overflow for smoother animation */
+    }
+
+    .project:hover img {
+      transform: scale(1.1);
+      /* Scale up image on hover */
+    }
+  </style>
 </head>
+
 <body>
+  <header>
+    <h1>Arohi Magotra</h1>
+    <img src="your_picture.jpg" alt="Profile Picture" style="max-width: 150px; border-radius: 50%;">
+    <h3> Senior iOS Developer </h3>
+  </header>
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#projects">My Work</a>
+    <a href="mailto:your.email@example.com">Contact</a> <!-- Added mailto: link -->
+  </nav>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>With years of experience in iOS development, I specialize in crafting sleek and user-friendly apps for the Apple
+    ecosystem. From elegant UI designs to seamless functionalities, I bring your app ideas to life with precision and
+    expertise. Let's build something amazing together for the App Store!</p>
+  </section>
+  <section id="projects">
+    <h2>My Work</h2>
+    <div class="projects-grid">
+      <div class="project" onclick="animateProject(this)">
+        <a href="project1.html"><img src="project1.jpg" alt="Project 1"></a>
+      </div>
+      <div class="project" onclick="animateProject(this)">
+        <a href="project2.html"><img src="project2.jpg" alt="Project 2"></a>
+      </div>
+      <!-- Add more projects as needed -->
+    </div>
+  </section>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>You can contact me at: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    <!-- Added mailto: link -->
+  </section>
 
-    <header>
-        <h1>Senior iOS Developer</h1>
-        <p>Results-driven Senior iOS Developer with 6+ years of extensive experience in designing, developing, and maintaining high-quality iOS applications. Proficient in Swift and Objective-C with a strong understanding of iOS SDK, Xcode, and Interface Builder. Proven track record of delivering high-quality, scalable mobile applications from concept to deployment. Continuously staying updated with the latest iOS trends and technologies to ensure optimal app performance and user experience</p>
-    </header>
-
-    <section>
-        <h2>Projects Showcase</h2>
-        <div class="project">
-            <h3>ABSA Banking Limited</h3>
-            <p>Our Absa Banking App gives you banking that’s not only simple, but also a perfect fit for your life. Our App lets you:
-Keep your accounts secure. Approve transactions you start and reject any that look suspicious. Stop and replace your credit or debit card when it gets lost.
-Limit your card to till point use, online use or no use at all with Temporary Lock and so on.. </p>
-            <div class="project-description">
-                <p>Technologies used: Swift, UIKit Design Pattern: MVVM</p>
-            </div>
-        </div>
-
-        <div class="project">
-            <h3>Project 2: Another Project</h3>
-            <p>Project description goes here...</p>
-            <div class="project-description">
-                <!-- Include more details about the project -->
-                <img src="project2_screenshot.jpg" alt="Project 2 Screenshot">
-                <p>Technologies used: SwiftUI, Combine</p>
-            </div>
-        </div>
-
-        <!-- Add more project sections as needed -->
-        
-    </section>
-
-    <footer>
-        <p>Contact me at: arohimagotra@gmail.com</p>
-    </footer>
-
+  <script>
+    function animateProject(element) {
+            // Add animation class to project element
+            element.classList.add('animated');
+            // Reset animation class after animation completes
+            setTimeout(function() {
+                element.classList.remove('animated');
+            }, 1000); // Adjust this time to match your animation duration
+        }
+  </script>
 </body>
+
 </html>
